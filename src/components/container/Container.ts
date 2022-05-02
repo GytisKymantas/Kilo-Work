@@ -1,18 +1,29 @@
 import styled from "styled-components/macro";
-import {tablet } from "styles/breakpoints";
+import { Theme } from "styles/theme";
+// import { Box } from "components/wrappers/Box";
+import { tablet } from "styles/breakpoints";
+import {
+  compose,
+  position,
+  PositionProps,
+  color,
+  ColorProps,
+} from "styled-system";
 
-interface ContainerStyles {
-  minHeight?: string;
-  maxHeight?: string;
-}
+const containerProps = compose(position, color);
 
-export const Container = styled.div<ContainerStyles>`
-  position: relative;
-  padding: 64px;
-  min-height: ${({ minHeight }) => minHeight};
-  max-height: ${({ maxHeight }) => maxHeight};
+interface ContainerStyles<T> extends PositionProps<T>, ColorProps<T> {}
+
+export const Container = styled.div<ContainerStyles<Theme>>`
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 1rem;
 
   @media ${tablet} {
-    padding: 48px;
+    max-width: 72rem;
+  }
+
+  && {
+    ${containerProps}
   }
 `;

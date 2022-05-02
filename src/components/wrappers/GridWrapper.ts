@@ -1,9 +1,9 @@
 import styled from "styled-components/macro";
-import { Styles } from "./Box";
+import { grid, GridProps } from "styled-system";
+import { Box } from "./Box";
 import { Theme } from "styles/theme";
-import { grid } from "styled-system";
 
-export const GridWrapper = styled.section<Styles<Theme>>`
+export const GridWrapper = styled(Box)<GridProps<Theme>>`
   display: grid;
 
   && {
