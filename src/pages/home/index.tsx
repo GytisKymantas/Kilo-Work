@@ -6,6 +6,7 @@ import { useQuery } from "styles/breakpoints";
 import { Breakpoints } from "styles/theme";
 import { StaticImage } from "gatsby-plugin-image";
 import { theme } from "styles/theme";
+import { GridWrapper } from "components/wrappers/GridWrapper";
 // import { ThemeProvider } from "styled-components/macro";
 
 type People = "Viktorija" | "Vidmis" | "Martyna" | "Nojus"; //NOTE: Type might be not only strings
@@ -80,18 +81,26 @@ const Home: React.FC = () => {
       <Box
         backgroundColor={{
           _: "primary",
-          ltablet: "primary",
+          ltablet: "teal",
         }}
         minHeight={isMobile ? "50%" : "100vh"}
         minWidth="100vw"
       >
+        <GridWrapper gridTemplateColumns={isMobile ? "1fr" : "1fr 1fr"}>
+          <Box>
+            <Typography type="h2">Ole</Typography>
+          </Box>
+          <Box>
+            <Typography type="h2">Ole</Typography>
+          </Box>
+        </GridWrapper>
         <Typography type="h1" textAlign="center">
           fooood
         </Typography>
-        {/* <Image src="gatsbyImg" maxHeight="6.25rem" /> */}
+        <Image src="veggie" maxHeight="6.25rem" />
         {/* arba toki arba toki staticas sunku su sarasu dideliu del didelio masto (staticImage)*/}
-        {/* <StaticImage
-          src="../../assets/images/image.png"
+        <StaticImage
+          src="../../assets/images/chocolate.png"
           alt="foto"
           placeholder="tracedSVG"
           draggable="false"
@@ -99,15 +108,7 @@ const Home: React.FC = () => {
             maxWidth: "500px",
             margin: "0 auto",
           }}
-        /> */}
-        {/* {FOODS.map(({id,name,food}=>
-            <Box key={id}>
-              <Typography color='accent'>
-                {name} loves {food}
-              </Typography>
-            </Box>
-          
-          ))} */}
+        />
       </Box>
     </SectionWrapper>
     // </ThemeProvider>

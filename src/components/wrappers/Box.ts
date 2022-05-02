@@ -1,8 +1,6 @@
 import styled from "styled-components/macro";
 import { Theme } from "styles/theme";
 import {
-  alignSelf,
-  AlignSelfProps,
   border,
   BorderProps,
   BoxShadowProps,
@@ -51,9 +49,12 @@ export interface Styles<T>
     ShadowProps<T>,
     TextAlignProps<T>,
     BackgroundProps<T>,
-    SpaceProps<T> {}
+    SpaceProps<T> {
+  radius?: string;
+}
 
 export const Box = styled.div<Styles<Theme>>`
+  border-radius: ${({ radius }) => radius};
   && {
     ${boxProps};
   }

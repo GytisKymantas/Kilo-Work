@@ -19,6 +19,9 @@ export const theme = {
     secondary: "Lobster",
     tertiary: "Eudoxus sign",
   },
+  borderRadius: {
+    br50: "1.875rem",
+  },
   fontSizes: {
     fs14: "0.875rem",
     fs16: "1rem",
@@ -35,9 +38,13 @@ export const theme = {
   },
   breakpoints: ["24rem", "47rem", "90rem"] as unknown as Breakpoints,
   space: {
+    auto: "auto",
+    s0: 0,
     s16: 6,
+    s20: 20,
     s40: 40,
     s30: 30,
+    s35: 35,
     s50: 50,
     s70: 70,
     s80: 80,

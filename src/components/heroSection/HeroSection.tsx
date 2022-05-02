@@ -8,13 +8,16 @@ import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import BlackButton from "components/blackButton/BlackButton";
 import UserAccount from "components/userAccount/UserAccount";
 import styled from "styled-components/macro";
+import { useQuery } from "styles/breakpoints";
 
 const HeroSection = () => {
+  const { isMobile, isTablet } = useQuery();
+
   return (
     <GridWrapper
-      gridTemplateColumns={"1fr 1fr"}
+      gridTemplateColumns={isTablet ? "1fr" : "1fr 1fr"}
       gridTemplateRows={"640px"}
-      m={"s90"}
+      mx={isTablet ? "s0" : "s90"}
     >
       <Box
         bg="teal"
@@ -23,7 +26,7 @@ const HeroSection = () => {
         <GrayButtonContainer ml={50}>
           <GrayButton title={"Hot Recipes"} secondButton />
         </GrayButtonContainer>
-        <Box ml={"35px"}>
+        <Box ml={"s35"}>
           <SectionHeader
             header={"Spicy delicious chicken wings"}
             paragraph={
@@ -31,7 +34,7 @@ const HeroSection = () => {
             }
           />
         </Box>
-        <FlexWrapper ml={"s50"} mb={"s100"} gap={"16px"}>
+        <FlexWrapper ml={"s50"} mb={isTablet ? "s50" : "s100"} gap={"16px"}>
           <GrayButton image={"timewatch"} title={"30 Minutes"} />
           <GrayButton image={"forkknife"} title={"Chicken"} />
         </FlexWrapper>

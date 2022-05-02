@@ -1,5 +1,6 @@
 import React from "react";
 import FoodCard from "./FoodCard";
+import { useQuery } from "styles/breakpoints";
 import { GridWrapper } from "components/wrappers/GridWrapper";
 
 const MapFoodSection = [
@@ -28,11 +29,10 @@ const MapFoodSection = [
     image: "meatballs",
     id: 5,
   },
-  {
-    image: null,
-
-    id: 99,
-  },
+  // {
+  //   image: "null",
+  //   id: 99,
+  // },
 
   {
     restaurantCardTitle: "Fruity Pancake with Orange & Blueberry",
@@ -53,12 +53,14 @@ const MapFoodSection = [
 ];
 
 const FoodCardSection = () => {
+  const { isMobile, isTablet } = useQuery();
+
   return (
     <GridWrapper
-      gridTemplateColumns={"1fr 1fr 1fr "}
-      m={"s90"}
+      gridTemplateColumns={isMobile ? "1fr" : isTablet ? "1fr" : "1fr 1fr 1fr"}
+      mx={isTablet ? "auto" : "s90"}
       width={"368px"}
-      gridGap={"56px"}
+      gridGap={isTablet ? "10px" : "56px"}
     >
       {MapFoodSection.map(({ restaurantCardTitle, image, id }) => (
         <FoodCard

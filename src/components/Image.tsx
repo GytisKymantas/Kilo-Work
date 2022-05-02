@@ -10,12 +10,14 @@ interface Styles {
   height?: string;
   margin?: string;
   maxHeight?: string;
+  borderRadius?: string;
 }
 
 interface ImageProps extends Styles {
-  src: Visuals | undefined;
+  src: Visuals;
   mobile_src?: Visuals;
   onClick?: () => void;
+  style?: any;
 }
 
 const Img = styled.img<Styles>`
@@ -24,6 +26,7 @@ const Img = styled.img<Styles>`
   width: ${({ width }) => width || ""};
   height: ${({ height }) => height || ""};
   max-height: ${({ maxHeight }) => maxHeight || ""};
+  border-radius: ${({ borderRadius }) => borderRadius || ""};
 `;
 
 export const Image: React.FC<ImageProps> = ({

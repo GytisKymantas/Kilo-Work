@@ -6,17 +6,20 @@ import { Image } from "components";
 import styled from "styled-components/macro";
 import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import GrayButton from "components/foodLabel/GrayButton";
+import { theme } from "styles/theme";
 
 type FoodCardTypes = {
   restaurantCardTitle: string | undefined;
   key?: number;
-  image?: string | null;
+  src?: string;
+  style?: string;
+  image?: string | undefined;
 };
 
 const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
   return (
     <SectionWrapper maxWidth={"370px"}>
-      {image === null ? (
+      {!image ? (
         <Image src="advertisement" />
       ) : (
         <Box
@@ -25,13 +28,13 @@ const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
           }
         >
           <MainImageContainer>
-            <Image src={image} style={{ borderRadius: "30px" }} />
+            <Image src={image} borderRadius="30px" />
           </MainImageContainer>
-          <HeartImageContainer
+          <Box
             height={48}
             width={48}
             bg="white"
-            borderRadius={50}
+            radius={"50"}
             position="absolute"
             top="65px"
             right="20px"
@@ -40,7 +43,7 @@ const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
             <HeartImage position="absolute" top="35%" left="25%">
               <Image src="heartred" />
             </HeartImage>
-          </HeartImageContainer>
+          </Box>
           <Typography type="h3" color="primary" mt={"s30"} ml={"s30"}>
             {restaurantCardTitle}
           </Typography>
@@ -57,5 +60,4 @@ const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
 export default FoodCard;
 
 const MainImageContainer = styled(Box)``;
-const HeartImageContainer = styled(Box)``;
 const HeartImage = styled(Box)``;

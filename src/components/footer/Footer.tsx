@@ -6,12 +6,20 @@ import { Typography } from "components/typography/Typography";
 import { NavigationList } from "components/navigation/Navigation";
 import { Image } from "components/Image";
 import { NavigationListItem } from "components/navigation/Navigation";
+import { useQuery } from "styles/breakpoints";
 
 const Footer = () => {
+  const { isMobile, isTablet } = useQuery();
   return (
     <SectionWrapper>
       <Box mx={"s80"} pb={"s80"} borderBottom="1px solid #E5E5E5;">
-        <FlexWrapper justifyContent="space-between" mb={"20px"}>
+        <FlexWrapper
+          justifyContent="space-between"
+          mb={"s20"}
+          flexDirection={isTablet ? "column" : ""}
+          alignItems={isTablet ? "center" : ""}
+          gap={isTablet ? "20px" : ""}
+        >
           <Box>
             <Typography type={"h2"} color={"primary"} fontFamily={"Lobster"}>
               Foodieland
@@ -32,19 +40,21 @@ const Footer = () => {
           Lorem ipsum dolor sit amet, consectetuipisicing elit,{" "}
         </Typography>
       </Box>
-      {/* <FlexWrapper> */}
       <FlexWrapper
-        mt={"50px"}
+        mt={isTablet ? "s20" : "s50"}
         textAlign="center"
         display="flex"
         justifyContent="space-around"
+        flexDirection={isTablet ? "column" : ""}
+        alignItems={isTablet ? "center" : ""}
+        gap={isTablet ? "20px" : ""}
       >
         <Box width="100px" height="30px"></Box>
         <FlexWrapper gap="5px">
           <Typography type={"span"} color="primary">
             © 2020 Flowbase. Powered by{" "}
           </Typography>
-          <Typography display="block" type={"span"} color="orange">
+          <Typography type={"span"} color="orange">
             Webflow
           </Typography>
         </FlexWrapper>
