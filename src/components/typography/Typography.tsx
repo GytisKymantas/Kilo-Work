@@ -12,9 +12,7 @@ import {
   textStyle,
   typography,
 } from "styled-system";
-
 import { Colors, Theme } from "styles/theme";
-
 import { applyTextType } from "./TypographyHelpers";
 
 export type TextType = "h1" | "h2" | "h3" | "body16" | "caption12" | "span";

@@ -13,7 +13,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Red Hat Display\:300,400,400,700`],
+        fonts: [
+          `Red Hat Display\:300,400,400,700`,
+          `Lobster\:300,400,400,700`,
+          `Inter\:300,400,400,700`,
+        ],
         display: `swap`,
       },
     },
@@ -29,6 +33,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
     {

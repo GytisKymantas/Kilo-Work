@@ -23,6 +23,8 @@ import {
   TextAlignProps,
   zIndex,
   ZIndexProps,
+  background,
+  BackgroundProps,
 } from "styled-system";
 
 const boxProps = compose(
@@ -34,7 +36,8 @@ const boxProps = compose(
   layout,
   border,
   shadow,
-  textAlign
+  textAlign,
+  background
 );
 
 export interface Styles<T>
@@ -47,6 +50,7 @@ export interface Styles<T>
     LayoutProps<T>,
     ShadowProps<T>,
     TextAlignProps<T>,
+    BackgroundProps<T>,
     SpaceProps<T> {}
 
 export const Box = styled.div<Styles<Theme>>`

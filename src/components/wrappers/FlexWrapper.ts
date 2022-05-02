@@ -2,10 +2,28 @@ import styled from "styled-components/macro";
 import { Styles } from "./Box";
 import { Theme } from "styles/theme";
 import { flexbox } from "styled-system";
+import { Box } from "./Box";
 
-export const FlexWrapper = styled.section<Styles<Theme>>`
+interface FlexWrapperProps {
+  alignItems?: string;
+  alignContent?: string;
+  justifyItems?: string;
+  justifyContent?: string;
+  flexWrap?: string;
+  flexDirection?: string;
+  flex?: string;
+  flexGrow?: string;
+  flexShrink?: string;
+  flexBasis?: string;
+  justifySelf?: string;
+  alignSelf?: string;
+  order?: string;
+  gap?: string;
+}
+
+export const FlexWrapper = styled(Box)<FlexWrapperProps>`
   display: flex;
-
+  gap: ${({ gap }) => gap};
   && {
     ${flexbox}
   }

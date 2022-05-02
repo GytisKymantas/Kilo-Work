@@ -1,12 +1,16 @@
 import styled from "styled-components/macro";
 import { Styles } from "./Box";
-import { Theme } from "styles/theme";
-import { grid } from "styled-system";
+import { grid, GridProps, space, SpaceProps, compose } from "styled-system";
+import { Box } from "./Box";
 
-export const GridWrapper = styled.section<Styles<Theme>>`
+const gridProps = compose(space, grid);
+
+interface GridWrapperProps extends GridProps<any>, SpaceProps<any> {}
+
+export const GridWrapper = styled(Box)<GridWrapperProps>`
   display: grid;
 
   && {
-    ${grid}
+    ${gridProps}
   }
 `;

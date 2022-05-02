@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
 import LazyLoad from "react-lazyload";
-
 import { mobile } from "styles/breakpoints";
 import { Visuals, visuals } from "utils/visuals";
 
@@ -14,7 +13,7 @@ interface Styles {
 }
 
 interface ImageProps extends Styles {
-  src: Visuals;
+  src: Visuals | undefined;
   mobile_src?: Visuals;
   onClick?: () => void;
 }

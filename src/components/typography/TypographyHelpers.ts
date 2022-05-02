@@ -7,7 +7,7 @@ export const applyTextType = (type: TextType, theme: Theme) => {
     case "h1":
       return css`
         // returnninam visa css, nieko ko neatpazysta. Jokios ne funkcijos
-        font-weight: ${theme.typography.h1.fontSize};
+        font-weight: ${theme.typography.h1.fontWeight};
         font-size: ${theme.typography.h1.fontSize};
       `;
   }

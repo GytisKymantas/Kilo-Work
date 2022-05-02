@@ -1,10 +1,23 @@
 import styled from "styled-components/macro";
 import React from "react";
-import { Styles } from "../wrappers/Box";
+import {
+  space,
+  SpaceProps,
+  layout,
+  LayoutProps,
+  compose,
+  position,
+  PositionProps,
+} from "styled-system";
+
+const InputProps = compose(space, layout, position);
 
 export type InputEvent = React.ChangeEvent<HTMLInputElement>;
 
-interface InputStyles extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputStyles
+  extends React.InputHTMLAttributes<HTMLInputElement>,
+    SpaceProps<any>,
+    PositionProps<any> {
   min?: number;
   max?: number;
   placeholder?: string;
@@ -14,6 +27,10 @@ interface InputStyles extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: string;
 }
 
-export const Input = styled.input<Styles<InputStyles>>`
+export const Input = styled.input<InputStyles>`
   display: grid;
+  border-radius: 24px;
+  && {
+    ${InputProps}
+  }
 `;
