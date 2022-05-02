@@ -6,16 +6,27 @@ import { FlexWrapper } from "components/wrappers/FlexWrapper";
 type SectionHeaderTypes = {
   header?: string;
   paragraph?: string;
+  center?: boolean;
 };
 
-const SectionHeader: React.FC<SectionHeaderTypes> = ({ header, paragraph }) => {
+const SectionHeader: React.FC<SectionHeaderTypes> = ({
+  header,
+  paragraph,
+  center,
+}) => {
   return (
     <ContentWrapper m={"auto"} mb={"30px"}>
-      <FlexWrapper gap={"14px"} flexDirection="column">
+      <FlexWrapper
+        gap={"14px"}
+        flexDirection="column"
+        AlignItems={center ? "center" : ""}
+      >
         <Typography type="h1" color="primary">
           {header}
         </Typography>
-        <Typography color={"gray"}>{paragraph}</Typography>
+        <Typography fontSize={"fs16"} color={"gray"}>
+          {paragraph}
+        </Typography>
       </FlexWrapper>
     </ContentWrapper>
   );

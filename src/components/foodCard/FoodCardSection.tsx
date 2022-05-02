@@ -29,10 +29,11 @@ const MapFoodSection = [
     image: "meatballs",
     id: 5,
   },
-  // {
-  //   image: "null",
-  //   id: 99,
-  // },
+  {
+    image: "null",
+    restaurantCardTitle: "null",
+    id: 99,
+  },
 
   {
     restaurantCardTitle: "Fruity Pancake with Orange & Blueberry",

@@ -17,10 +17,11 @@ const BlackButton: React.FC<BlackButtonTypes> = ({ title, image, isShort }) => {
       height={60}
       display="flex"
       alignItems="center"
+      backgroundColor="primary"
       justifyContent="center"
       pl={"s20"}
       rad={isShort ? "15px" : "30px"}
-      gap={17}
+      gap={"16px"}
     >
       {title}
       {title && <Image src={image} style={{ cursor: "pointer" }} />}

@@ -25,15 +25,19 @@ const Email = () => {
             }
           />
         </FlexWrapper>
-        <FlexWrapper position={"relative"} justifyContent="center">
-          <Input
-            p={"30px"}
-            width={"480px"}
-            height={"80px"}
-            placeholder={"Your email adress..."}
-          ></Input>
-          <Box position={"absolute"} top={"10%"} right={"33%"}>
-            <BlackButton title={"Subscribe"} isShort />
+        <FlexWrapper justifyContent="center">
+          <Box position="relative">
+            <Box>
+              <Input
+                p={"30px"}
+                width={"480px"}
+                height={"80px"}
+                placeholder={"Your email adress..."}
+              ></Input>
+            </Box>
+            <Box position={"absolute"} top={"10%"} right={"5%"}>
+              <BlackButton title={"Subscribe"} isShort />
+            </Box>
           </Box>
         </FlexWrapper>
       </Box>

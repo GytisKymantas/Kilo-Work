@@ -18,6 +18,7 @@ const HeroSection = () => {
       gridTemplateColumns={isTablet ? "1fr" : "1fr 1fr"}
       gridTemplateRows={"640px"}
       mx={isTablet ? "s0" : "s90"}
+      mb={isTablet ? "s0" : "s160"}
     >
       <Box
         bg="teal"

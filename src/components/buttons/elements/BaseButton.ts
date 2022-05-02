@@ -10,6 +10,7 @@ import {
   ColorProps,
   border,
   BorderProps,
+  BackgroundColorProps,
   flexbox,
   FlexboxProps,
 } from "styled-system";
@@ -21,10 +22,11 @@ export interface DefaultButtonProps
   extends SpaceProps<Theme>,
     ColorProps<Theme>,
     LayoutProps<Theme>,
+    BackgroundColorProps<Theme>,
     BorderProps<Theme>,
     FlexboxProps<Theme> {
   type?: "button" | "submit" | "reset";
-  gap?: number;
+  gap?: string;
   onClick?: () => void;
   isShort?: boolean;
   rad: string;
@@ -42,6 +44,9 @@ export type ButtonStyles = Pick<
   | "alignItems"
   | "pl"
   | "border"
+  | "borderRadius"
+  | "backgroundColor"
+  | "rad"
 >;
 
 export const BaseButton = styled.button<ButtonStyles>`

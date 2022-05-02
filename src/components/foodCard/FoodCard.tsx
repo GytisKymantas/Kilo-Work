@@ -19,7 +19,7 @@ type FoodCardTypes = {
 const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
   return (
     <SectionWrapper maxWidth={"370px"}>
-      {!image ? (
+      {image === "null" ? (
         <Image src="advertisement" />
       ) : (
         <Box
@@ -34,7 +34,7 @@ const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
             height={48}
             width={48}
             bg="white"
-            radius={"50"}
+            radius="50%"
             position="absolute"
             top="65px"
             right="20px"
@@ -60,4 +60,6 @@ const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
 export default FoodCard;
 
 const MainImageContainer = styled(Box)``;
-const HeartImage = styled(Box)``;
+const HeartImage = styled(Box)`
+  border-radius: 50px;
+`;

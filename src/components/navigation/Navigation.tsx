@@ -12,9 +12,10 @@ const Navigation = () => {
 
   return (
     <Box
-      height={isTablet ? 300 : 170}
+      height={isTablet ? 300 : 110}
       maxWidth={1440}
       borderBottom="1px solid rgba(0, 0, 0, 0.1)"
+      mb={"s40"}
     >
       <FlexWrapper
         py={"s40"}
