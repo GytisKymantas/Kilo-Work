@@ -35,6 +35,7 @@ export const theme = {
     fs14: "0.875rem",
     fs16: "1rem",
     fs18: "1.125rem",
+    fs32: "2rem",
     fs24: "1.5rem",
     fs48: "3rem",
     fs64: "4rem",

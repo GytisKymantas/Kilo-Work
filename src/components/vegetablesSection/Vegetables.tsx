@@ -29,6 +29,3 @@ const Vegetables = () => {
 };
 
 export default Vegetables;
-{
-  /* <Image src={veggies} />; */
-}
