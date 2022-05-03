@@ -21,10 +21,10 @@ const UserAccount: React.FC<UserAccountType> = ({
       <FlexWrapper gap={"16px"}>
         <Image src={image} />
         <FlexWrapper flexDirection="column" justifyContent="space-around">
-          <Typography type={"span"} color="primary" fontWeight="700">
+          <Typography type={"span"} color="primary" fontWeight="fw700">
             {name}
           </Typography>
-          <Typography type={"span"} color="rgba(0, 0, 0, 0.6)">
+          <Typography type={"span"} color="gray">
             {dateOfPost}
           </Typography>
         </FlexWrapper>

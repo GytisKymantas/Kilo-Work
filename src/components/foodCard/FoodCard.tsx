@@ -6,7 +6,6 @@ import { Image } from "components";
 import styled from "styled-components/macro";
 import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import GrayButton from "components/foodLabel/GrayButton";
-import { theme } from "styles/theme";
 
 type FoodCardTypes = {
   restaurantCardTitle: string | undefined;

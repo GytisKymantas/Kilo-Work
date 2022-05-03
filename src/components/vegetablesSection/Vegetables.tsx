@@ -8,12 +8,11 @@ import { useQuery } from "styles/breakpoints";
 const MapVeggies = ["rice", "cake", "chocolate", "meat", "sandwich", "veggie"];
 
 const Vegetables = () => {
-  const { isMobile, isTablet } = useQuery();
+  const { isTablet } = useQuery();
 
   return (
     <Box
-      ml={isTablet ? "s50" : "s40"}
-      mr={isTablet ? "s50" : "s40"}
+      mx={isTablet ? "s50" : "s40"}
       mt={isTablet ? "s40" : "s0"}
       mb={isTablet ? "s40" : "s160"}
     >

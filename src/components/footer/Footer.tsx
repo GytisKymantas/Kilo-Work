@@ -9,7 +9,7 @@ import { NavigationListItem } from "components/navigation/Navigation";
 import { useQuery } from "styles/breakpoints";
 
 const Footer = () => {
-  const { isMobile, isTablet } = useQuery();
+  const { isTablet } = useQuery();
   return (
     <SectionWrapper>
       <Box mx={"s80"} pb={"s80"} borderBottom="1px solid #E5E5E5;">
@@ -64,7 +64,6 @@ const Footer = () => {
           <Image src="instagram" />
         </FlexWrapper>
       </FlexWrapper>
-      {/* </FlexWrapper> */}
     </SectionWrapper>
   );
 };

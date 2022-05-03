@@ -9,7 +9,9 @@ const colors = {
   teal: "#E7F9FA",
   white: "#ffffff",
   orange: "#ff7b00",
+  grayTwo: "rgba(0, 0, 0, 0.05)",
   gray: "rgba(0, 0, 0, 0.6)",
+  transparent: "transparent",
 };
 
 export const theme = {
@@ -20,6 +22,7 @@ export const theme = {
     tertiary: "Eudoxus sign",
   },
   radii: {
+    br30: "1.875rem",
     br50: "1.875rem",
   },
   zIndices: {

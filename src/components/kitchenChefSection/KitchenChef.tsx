@@ -1,16 +1,14 @@
 import React from "react";
 import { SectionWrapper } from "components/wrappers/SectionWrapper";
 import { GridWrapper } from "components/wrappers/GridWrapper";
-// import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import { useQuery } from "styles/breakpoints";
-
 import { StaticImage } from "gatsby-plugin-image";
 import { Box } from "components/wrappers/Box";
 import SectionHeader from "components/sectionHeader/SectionHeader";
 import BlackButton from "components/blackButton/BlackButton";
 
 const KitchenChef = () => {
-  const { isMobile, isTablet } = useQuery();
+  const { isTablet } = useQuery();
   return (
     <SectionWrapper>
       <GridWrapper gridTemplateColumns={isTablet ? "1fr" : "1fr 1fr"}>

@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { theme } from "styles/theme";
+import { Theme } from "styles/theme";
 import {
   compose,
   layout,
@@ -14,7 +14,6 @@ import {
   flexbox,
   FlexboxProps,
 } from "styled-system";
-import { Theme } from "styles/theme";
 
 const defaultButtonProps = compose(layout, space, color, border, flexbox);
 

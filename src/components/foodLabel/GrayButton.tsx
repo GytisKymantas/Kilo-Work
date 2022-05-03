@@ -19,10 +19,8 @@ const GrayButton: React.FC<GrayButtonType> = ({
 }) => {
   return (
     <Box
-      bg={
-        secondButton ? "white" : isGray ? "transparent" : "rgba(0, 0, 0, 0.05)"
-      }
-      borderRadius={30}
+      bg={secondButton ? "white" : isGray ? "transparent" : "grayTwo"}
+      borderRadius={"br30"}
       width={156}
       height={40}
       opacity={5}
@@ -39,7 +37,7 @@ const GrayButton: React.FC<GrayButtonType> = ({
             <Image src="scroll" />
           </FlexWrapper>
         )}
-        <Typography type="span" color="rgba(0, 0, 0, 0.06)">
+        <Typography type="span" color="gray">
           {title}
         </Typography>
       </FlexWrapper>

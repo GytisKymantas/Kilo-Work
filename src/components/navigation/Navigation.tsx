@@ -8,7 +8,7 @@ import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import { Image } from "components";
 
 const Navigation = () => {
-  const { isMobile, isTablet } = useQuery();
+  const { isTablet } = useQuery();
 
   return (
     <Box
@@ -24,7 +24,6 @@ const Navigation = () => {
         alignItems={isTablet ? "center" : ""}
         gap={isTablet ? "20px" : ""}
       >
-        {/* <Box p={"s40"}> */}
         <Box>
           <Typography type={"h2"} color={"primary"} fontFamily={"Lobster"}>
             Foodieland
@@ -45,7 +44,6 @@ const Navigation = () => {
           <Image src="twitter" />
           <Image src="instagram" />
         </FlexWrapper>
-        {/* </Box> */}
       </FlexWrapper>
     </Box>
   );
