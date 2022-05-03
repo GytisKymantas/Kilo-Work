@@ -30,8 +30,8 @@ const MapFoodSection = [
     id: 5,
   },
   {
-    image: "null",
     restaurantCardTitle: "null",
+    image: "fruity",
     id: 99,
   },
 

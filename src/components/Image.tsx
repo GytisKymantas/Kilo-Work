@@ -14,7 +14,7 @@ interface Styles {
 }
 
 interface ImageProps extends Styles {
-  src: Visuals;
+  src?: Visuals;
   mobile_src?: Visuals;
   onClick?: () => void;
   style?: any;

@@ -13,7 +13,7 @@ type FoodCardTypes = {
   key?: number;
   src?: string;
   style?: string;
-  image?: string | undefined;
+  image?: string;
 };
 
 const FoodCard: React.FC<FoodCardTypes> = ({ restaurantCardTitle, image }) => {
