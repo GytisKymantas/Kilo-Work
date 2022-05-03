@@ -31,7 +31,7 @@ const MapFoodSection = [
   },
   {
     restaurantCardTitle: "null",
-    image: "fruity",
+    image: "null",
     id: 99,
   },
 

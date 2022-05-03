@@ -19,7 +19,6 @@ const Email = () => {
         <FlexWrapper>
           <SectionHeader
             header={"Deliciousness to your inbox"}
-            // textAlign="center"
             center
             paragraph={
               "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "

@@ -4,7 +4,7 @@ import { Image } from "components/Image";
 
 type BlackButtonTypes = {
   title: string;
-  image: string;
+  image?: string;
   isShort?: boolean;
 };
 

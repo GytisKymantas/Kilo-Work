@@ -41,7 +41,7 @@ export const Image: React.FC<ImageProps> = ({
       <picture>
         {mobile_src && <source media={mobile} srcSet={visuals[mobile_src]} />}
         {/* uzsetina sitaip kaip mobile, bet pirma mobile turi buti <source> yra html tagas, turi attributa srcSet*/}
-        <Img src={visuals[src]} alt={src} {...rest} />
+        <Img src={visuals[src as string]} alt={src} {...rest} />
       </picture>
     </LazyLoad>
   );
