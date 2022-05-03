@@ -5,7 +5,7 @@ import { Theme } from "styles/theme";
 
 export const ContentWrapper = styled.section<Styles<Theme>>`
   margin: 0 auto;
-  max-width: 58rem;
+  max-width: 46rem;
   padding: 0 1rem;
 
   @media ${tablet} {
