@@ -7,17 +7,15 @@ type SectionHeaderTypes = {
   header?: string;
   paragraph?: string;
   center?: boolean;
-  textAlign?:string;
 };
 
 const SectionHeader: React.FC<SectionHeaderTypes> = ({
   header,
   paragraph,
   center,
-  textAlign,
 }) => {
   return (
-    <ContentWrapper m={"auto"} mb={"s30"} {textAlign && textAlign="center"}>
+    <ContentWrapper m={"auto"} mb={"s30"}>
       <FlexWrapper
         gap={"14px"}
         flexDirection="column"
