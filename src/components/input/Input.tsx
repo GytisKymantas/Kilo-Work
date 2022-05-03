@@ -26,7 +26,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   placeholder,
   ...rest
 }) => (
-  <form>
+  <>
     {label && <label htmlFor="input">{label}</label>}
     <input
       id={label}
@@ -38,5 +38,5 @@ export const InputField: React.FC<InputFieldProps> = ({
       {...rest}
     />
     {error && <span>{error}</span>}
-  </form>
+  </>
 );
