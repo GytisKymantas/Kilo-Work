@@ -17,13 +17,17 @@ const Footer = () => {
       <Box mx={"s80"} pb={"s80"} borderBottom="1px solid #E5E5E5;">
         <FlexWrapper
           justifyContent="space-between"
-          mb={"s20"}
           flexDirection={isTablet ? "column" : ""}
-          alignItems={isTablet ? "center" : ""}
+          alignItems={"center"}
           gap={isTablet ? "20px" : ""}
         >
           <Box>
-            <Typography type={"h2"} color={"primary"} fontFamily={"Lobster"}>
+            <Typography
+              type={"h2"}
+              fontSize={"fs24"}
+              color={"primary"}
+              fontFamily={"Lobster"}
+            >
               Foodieland
               <Typography type={"span"} color={"orange"}>
                 .

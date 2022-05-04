@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, GridWrapper, FlexWrapper } from "components";
+import { Box, GridWrapper, FlexWrapper, Image } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionHeader from "components/sectionHeader/SectionHeader";
 import GrayButton from "components/foodLabel/GrayButton";
@@ -9,7 +9,7 @@ import styled from "styled-components/macro";
 import { useQuery } from "styles/breakpoints";
 
 const HeroSection = () => {
-  const { isMobile, isTablet } = useQuery();
+  const { isTablet } = useQuery();
 
   return (
     <GridWrapper
@@ -18,33 +18,46 @@ const HeroSection = () => {
       mx={isTablet ? "s0" : "s90"}
       mb={isTablet ? "s0" : "s160"}
     >
-      <Box
-        bg="teal"
-        backgroundImage={"url('../../assets/images/rectangle.png')"}
-      >
-        <GrayButtonContainer ml={50}>
-          <GrayButton title={"Hot Recipes"} secondButton />
-        </GrayButtonContainer>
-        <Box ml={"s35"}>
-          <SectionHeader
-            header={"Spicy delicious chicken wings"}
-            paragraph={
-              "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim"
-            }
-          />
+      <Box position="relative">
+        <StaticImage
+          src="../../assets/images/rectangle.png"
+          placeholder="tracedSVG"
+          draggable="false"
+          style={{
+            height: "100%",
+            width: "100%",
+          }}
+          alt="teal background"
+        />
+        <Box position="absolute" top="5%" right="-15%" zIndex={2}>
+          <Image src="badge" />
         </Box>
-        <FlexWrapper ml={"s50"} mb={isTablet ? "s50" : "s100"} gap={"16px"}>
-          <GrayButton image={"timewatch"} title={"30 Minutes"} />
-          <GrayButton image={"forkknife"} title={"Chicken"} />
-        </FlexWrapper>
-        <FlexWrapper ml={"s50"} mb={"s50"} gap={"50px"}>
-          <UserAccount
-            name={"John Smith"}
-            dateOfPost={"15 March 2022"}
-            image={"user"}
-          />
-          <BlackButton title={"View Recipes"} image={"play"} />
-        </FlexWrapper>
+        <Box position="absolute" top="0">
+          <GrayButtonContainer ml={50}>
+            <GrayButton title={"Hot Recipes"} secondButton />
+          </GrayButtonContainer>
+          <Box ml={"s35"}>
+            <SectionHeader
+              headerOne
+              header={"Spicy delicious chicken wings"}
+              paragraph={
+                "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim"
+              }
+            />
+          </Box>
+          <FlexWrapper ml={"s50"} mb={isTablet ? "s50" : "s100"} gap={"16px"}>
+            <GrayButton image={"timewatch"} title={"30 Minutes"} />
+            <GrayButton image={"forkknife"} title={"Chicken"} />
+          </FlexWrapper>
+          <FlexWrapper ml={"s50"} mb={"s50"} gap={"50px"}>
+            <UserAccount
+              name={"John Smith"}
+              dateOfPost={"15 March 2022"}
+              image={"user"}
+            />
+            <BlackButton title={"View Recipes"} image={"play"} />
+          </FlexWrapper>
+        </Box>
       </Box>
       <Box>
         <StaticImage

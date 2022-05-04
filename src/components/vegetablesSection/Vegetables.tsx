@@ -13,7 +13,7 @@ const Vegetables = () => {
       mt={isTablet ? "s40" : "s0"}
       mb={isTablet ? "s40" : "s160"}
     >
-      <Typography type="h3" fontSize={"fs48"} color="primary" mb={"s80"}>
+      <Typography type="h3" color="primary" mb={"s80"}>
         Categories
       </Typography>
       <FlexWrapper gap={"40px"} flexWrap="wrap">

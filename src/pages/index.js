@@ -16,6 +16,7 @@ const Landing = () => {
       <HeroSection />
       <Vegetables />
       <SectionHeader
+        center
         header="Simple and tasty recipes"
         paragraph="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
       />

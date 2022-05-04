@@ -14,20 +14,24 @@ const Navigation = () => {
       mb={"s40"}
     >
       <FlexWrapper
-        py={"s40"}
         justifyContent="space-around"
         flexDirection={isTablet ? "column" : "row"}
-        alignItems={isTablet ? "center" : ""}
+        alignItems={"center"}
         gap={isTablet ? "20px" : ""}
       >
-        <Box>
-          <Typography type={"h2"} color={"primary"} fontFamily={"Lobster"}>
-            Foodieland
-            <Typography type={"span"} color={"orange"}>
-              .
-            </Typography>
+        {/* <Box> */}
+        <Typography
+          type={"h2"}
+          color={"primary"}
+          fontSize={"fs24"}
+          fontFamily={"Lobster"}
+        >
+          Foodieland
+          <Typography type={"span"} color={"orange"}>
+            .
           </Typography>
-        </Box>
+        </Typography>
+        {/* </Box> */}
         <NavigationList>
           <NavigationListItem>Home</NavigationListItem>
           <NavigationListItem>Recipes</NavigationListItem>

@@ -16,6 +16,7 @@ const BlackButton: React.FC<BlackButtonTypes> = ({ title, image, isShort }) => {
       width={200}
       height={60}
       display="flex"
+      border="none"
       alignItems="center"
       backgroundColor="primary"
       justifyContent="center"

@@ -24,6 +24,8 @@ import meatballs from "assets/images/meatballs.png";
 import healthy from "assets/images/healthy.png";
 import chef from "assets/images/chef.png";
 import rectanglelong from "assets/images/rectanglelong.png";
+import rectangle from "assets/images/rectangle.png";
+import badge from "assets/images/badge.png";
 
 export type Visuals = keyof typeof visuals;
 
@@ -54,4 +56,6 @@ export const visuals: Record<string, string> = {
   healthy,
   chef,
   rectanglelong,
+  rectangle,
+  badge,
 };

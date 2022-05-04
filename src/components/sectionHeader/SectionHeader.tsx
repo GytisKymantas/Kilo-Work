@@ -6,30 +6,28 @@ type SectionHeaderTypes = {
   header?: string;
   paragraph?: string;
   center?: boolean;
+  headerOne?: boolean;
 };
 
 const SectionHeader: React.FC<SectionHeaderTypes> = ({
   header,
   paragraph,
   center,
+  headerOne,
 }) => {
   const { isTablet } = useQuery();
 
   return (
     <ContentWrapper m={"auto"} mb={"s30"}>
-      <FlexWrapper
-        gap={"14px"}
-        flexDirection="column"
-        alignItems={center ? "center" : ""}
-      >
+      <FlexWrapper gap={"14px"} flexDirection="column">
         <Typography
-          type="h1"
+          type={headerOne ? "h1" : "h2"}
           color="primary"
-          fontSize={isTablet ? "fs32" : "fs48"}
+          textAlign={center ? "center" : ""}
         >
           {header}
         </Typography>
-        <Typography fontSize={"fs16"} color={"gray"}>
+        <Typography color={"gray"} textAlign={center ? "center" : ""}>
           {paragraph}
         </Typography>
       </FlexWrapper>

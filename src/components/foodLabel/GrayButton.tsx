@@ -34,7 +34,7 @@ const GrayButton: React.FC<GrayButtonType> = ({
             <Image src="scroll" />
           </FlexWrapper>
         )}
-        <Typography type="span" color="gray">
+        <Typography type="body16" color="gray">
           {title}
         </Typography>
       </FlexWrapper>

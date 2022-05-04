@@ -28,6 +28,7 @@ interface InputStyles
 }
 
 export const Input = styled.input<InputStyles>`
+  border: none;
   display: grid;
   border-radius: 24px;
   && {
