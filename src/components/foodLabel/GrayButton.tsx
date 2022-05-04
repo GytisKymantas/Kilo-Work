@@ -1,8 +1,5 @@
 import React from "react";
-import { Box } from "components/wrappers/Box";
-import { Image } from "components/Image";
-import { Typography } from "components/typography/Typography";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
+import { Box, Image, Typography, FlexWrapper } from "components";
 
 type GrayButtonType = {
   title: string;

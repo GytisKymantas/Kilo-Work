@@ -1,11 +1,9 @@
 import React from "react";
-import { SectionWrapper } from "components/wrappers/SectionWrapper";
-import { GridWrapper } from "components/wrappers/GridWrapper";
 import { useQuery } from "styles/breakpoints";
 import { StaticImage } from "gatsby-plugin-image";
-import { Box } from "components/wrappers/Box";
+import { Box, GridWrapper, SectionWrapper } from "components";
 import SectionHeader from "components/sectionHeader/SectionHeader";
-import BlackButton from "components/blackButton/BlackButton";
+import BlackButton from "components/buttons/BlackButton";
 
 const KitchenChef = () => {
   const { isTablet } = useQuery();

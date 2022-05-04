@@ -4,8 +4,8 @@ export * from "./wrappers/FlexWrapper";
 export * from "./wrappers/ContentWrapper";
 export * from "./wrappers/GridWrapper";
 export * from "./wrappers/SectionWrapper";
-export * from "./container/Container";
-export * from "./input/Input";
+export * from "./wrappers/Container";
+export * from "./wrappers/Input";
 export * from "./wrappers/Box";
 
 //texts
@@ -16,7 +16,7 @@ export * from "./typography/Typography";
 export * from "./Image";
 
 // components
-export * from "./blackButton/BlackButton";
+export * from "./buttons/BlackButton";
 export * from "./emailSection/Email";
 export * from "./foodCard/FoodCard";
 export * from "./foodCard/FoodCardSection";

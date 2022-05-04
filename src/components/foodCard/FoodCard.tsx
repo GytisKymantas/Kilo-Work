@@ -1,10 +1,12 @@
 import React from "react";
-import { Box } from "components/wrappers/Box";
-import { Typography } from "components/typography/Typography";
-import { SectionWrapper } from "components/wrappers/SectionWrapper";
-import { Image } from "components";
+import {
+  Image,
+  SectionWrapper,
+  Typography,
+  Box,
+  FlexWrapper,
+} from "components";
 import styled from "styled-components/macro";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import GrayButton from "components/foodLabel/GrayButton";
 
 type FoodCardTypes = {

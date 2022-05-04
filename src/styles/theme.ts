@@ -85,6 +85,27 @@ export const theme = {
       lineHeightMobile: "3.25rem",
       fontWeight: 600,
     },
+    h4: {
+      fontSize: "48px",
+      fontSizeMobile: "32px",
+      lineHeightMobile: "22px",
+      lineHeight: "63px",
+      fontWeight: 600,
+    },
+    h5: {
+      fontSize: "40px",
+      fontSizeMobile: "26px",
+      lineHeightMobile: "34px",
+      lineHeight: "52px",
+      fontWeight: 600,
+    },
+    h6: {
+      fontSize: "32px",
+      fontSizeMobile: "24px",
+      lineHeightMobile: "32px",
+      lineHeight: "42px",
+      fontWeight: 600,
+    },
   },
 } as const;
 

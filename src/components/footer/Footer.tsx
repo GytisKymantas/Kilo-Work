@@ -1,11 +1,13 @@
 import React from "react";
-import { SectionWrapper } from "components/wrappers/SectionWrapper";
-import { Box } from "components/wrappers/Box";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
-import { Typography } from "components/typography/Typography";
-import { NavigationList } from "components/navigation/Navigation";
-import { Image } from "components/Image";
-import { NavigationListItem } from "components/navigation/Navigation";
+import {
+  Image,
+  NavigationListItem,
+  NavigationList,
+  Typography,
+  FlexWrapper,
+  Box,
+  SectionWrapper,
+} from "components";
 import { useQuery } from "styles/breakpoints";
 
 const Footer = () => {

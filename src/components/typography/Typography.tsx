@@ -15,12 +15,24 @@ import {
 import { Colors, Theme } from "styles/theme";
 import { applyTextType } from "./TypographyHelpers";
 
-export type TextType = "h1" | "h2" | "h3" | "body16" | "caption12" | "span";
+export type TextType =
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6"
+  | "body16"
+  | "caption12"
+  | "span";
 
 export enum TextTag {
   "h1" = "h1",
   "h2" = "h2",
   "h3" = "h3",
+  "h4" = "h4",
+  "h5" = "h5",
+  "h6" = "h6",
   "span" = "span",
   "body16" = "p",
   "caption12" = "p",

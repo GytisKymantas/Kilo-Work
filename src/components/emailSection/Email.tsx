@@ -1,10 +1,7 @@
 import React from "react";
-import { Input } from "components/input/Input";
-import { SectionWrapper } from "components/wrappers/SectionWrapper";
-import { Box } from "components/wrappers/Box";
 import SectionHeader from "components/sectionHeader/SectionHeader";
-import BlackButton from "components/blackButton/BlackButton";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
+import BlackButton from "components/buttons/BlackButton";
+import { FlexWrapper, Input, Box, SectionWrapper } from "components";
 
 const Email = () => {
   return (

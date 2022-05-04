@@ -1,8 +1,5 @@
 import React from "react";
-import { Box } from "components/wrappers/Box";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
-import { Typography } from "components/typography/Typography";
-import { Image } from "components/Image";
+import { Image, Typography, FlexWrapper, Box } from "components";
 import { useQuery } from "styles/breakpoints";
 
 const MapVeggies = ["rice", "cake", "chocolate", "meat", "sandwich", "veggie"];

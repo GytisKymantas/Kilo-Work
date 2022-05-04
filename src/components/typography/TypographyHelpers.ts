@@ -84,18 +84,5 @@ export const applyTextType = (type: TextType, theme: Theme) => {
           line-height: ${theme.typography.h6.lineHeightMobile}`
           : ""}
       `;
-
-    case "h7":
-      return css`
-        font-weight: ${theme.typography.h7.fontWeight};
-        font-size: ${theme.typography.h7.fontSize};
-        line-height: ${theme.typography.h7.lineHeight};
-
-        ${isTablet
-          ? css` 
-          font-size: ${theme.typography.h7.fontSizeMobile}
-          line-height: ${theme.typography.h7.lineHeightMobile}`
-          : ""}
-      `;
   }
 };

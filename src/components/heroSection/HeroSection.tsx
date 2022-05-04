@@ -1,11 +1,9 @@
 import React from "react";
-import { GridWrapper } from "components/wrappers/GridWrapper";
-import { Box } from "components/wrappers/Box";
+import { Box, GridWrapper, FlexWrapper } from "components";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionHeader from "components/sectionHeader/SectionHeader";
 import GrayButton from "components/foodLabel/GrayButton";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
-import BlackButton from "components/blackButton/BlackButton";
+import BlackButton from "components/buttons/BlackButton";
 import UserAccount from "components/userAccount/UserAccount";
 import styled from "styled-components/macro";
 import { useQuery } from "styles/breakpoints";

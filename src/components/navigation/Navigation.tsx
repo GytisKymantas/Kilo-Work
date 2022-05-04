@@ -1,11 +1,7 @@
 import React from "react";
-import { Box } from "components/wrappers/Box";
 import styled from "styled-components/macro";
 import { useQuery } from "styles/breakpoints";
-
-import { Typography } from "components/typography/Typography";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
-import { Image } from "components";
+import { Typography, Box, FlexWrapper, Image } from "components";
 
 const Navigation = () => {
   const { isTablet } = useQuery();

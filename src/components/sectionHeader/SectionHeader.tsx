@@ -1,7 +1,5 @@
 import React from "react";
-import { Typography } from "components/typography/Typography";
-import { ContentWrapper } from "components/wrappers/ContentWrapper";
-import { FlexWrapper } from "components/wrappers/FlexWrapper";
+import { FlexWrapper, ContentWrapper, Typography } from "components";
 import { useQuery } from "styles/breakpoints";
 
 type SectionHeaderTypes = {
