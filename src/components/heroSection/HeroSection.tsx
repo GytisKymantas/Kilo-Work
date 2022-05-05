@@ -29,7 +29,13 @@ const HeroSection = () => {
           }}
           alt="teal background"
         />
-        <Box position="absolute" top="5%" right="-15%" zIndex={2}>
+        <Box
+          position="absolute"
+          top="5%"
+          right="-15%"
+          zIndex={2}
+          display={isTablet ? "none" : ""}
+        >
           <Image src="badge" />
         </Box>
         <Box position="absolute" top="0">
@@ -83,4 +89,3 @@ const GrayButtonContainer = styled(Box)<any>`
 `;
 
 export default HeroSection;
-// backgroundImage = "url('../../assets/images/rectangle.png')";

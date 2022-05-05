@@ -1,17 +1,17 @@
 import React from "react";
 import {
   Image,
-  NavigationListItem,
-  NavigationList,
   Typography,
   FlexWrapper,
   Box,
   SectionWrapper,
 } from "components";
 import { useQuery } from "styles/breakpoints";
+import { NavigationListItem } from "components/navigation/Navigation";
+import { NavigationList } from "components/navigation/Navigation";
 
-const Footer = () => {
-  const { isTablet } = useQuery();
+const Footer: React.FC = () => {
+  const { isMobile, isTablet } = useQuery();
   return (
     <SectionWrapper>
       <Box mx={"s80"} pb={"s80"} borderBottom="1px solid #E5E5E5;">
@@ -35,11 +35,11 @@ const Footer = () => {
             </Typography>
           </Box>
           <NavigationList>
-            <NavigationListItem>Home</NavigationListItem>
-            <NavigationListItem>Recipes</NavigationListItem>
-            <NavigationListItem>Blog</NavigationListItem>
-            <NavigationListItem>Contact</NavigationListItem>
-            <NavigationListItem>About us</NavigationListItem>
+            <NavigationListItem to={"/home"}>Home</NavigationListItem>
+            <NavigationListItem to={"/"}>Recipes</NavigationListItem>
+            <NavigationListItem to={"/"}>Blog</NavigationListItem>
+            <NavigationListItem to={"/"}>Contact</NavigationListItem>
+            <NavigationListItem to={"/"}>About us</NavigationListItem>
           </NavigationList>
         </FlexWrapper>
         <Typography type={"span"} color="gray">

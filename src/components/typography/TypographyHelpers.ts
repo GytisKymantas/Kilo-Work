@@ -14,9 +14,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.h1.lineHeight};
 
         ${isTablet
-          ? css` 
-        font-size: ${theme.typography.h1.fontSizeMobile}
-        line-height: ${theme.typography.h1.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.h1.fontSizeMobile};
+              line-height: ${theme.typography.h1.lineHeightMobile};
+            `
           : ""}
       `;
     case "h2":
@@ -27,9 +28,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.h2.lineHeight};
 
         ${isTablet
-          ? css` 
-        font-size: ${theme.typography.h2.fontSizeMobile}
-        line-height: ${theme.typography.h2.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.h2.fontSizeMobile};
+              line-height: ${theme.typography.h2.lineHeightMobile};
+            `
           : ""}
       `;
 
@@ -40,9 +42,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.h3.lineHeight};
 
         ${isTablet
-          ? css` 
-        font-size: ${theme.typography.h3.fontSizeMobile}
-        line-height: ${theme.typography.h3.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.h3.fontSizeMobile};
+              line-height: ${theme.typography.h3.lineHeightMobile};
+            `
           : ""}
       `;
 
@@ -53,9 +56,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.h4.lineHeight};
 
         ${isTablet
-          ? css` 
-          font-size: ${theme.typography.h4.fontSizeMobile}
-          line-height: ${theme.typography.h4.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.h4.fontSizeMobile};
+              line-height: ${theme.typography.h4.lineHeightMobile};
+            `
           : ""}
       `;
 
@@ -66,9 +70,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.h5.lineHeight};
 
         ${isTablet
-          ? css` 
-          font-size: ${theme.typography.h5.fontSizeMobile}
-          line-height: ${theme.typography.h5.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.h5.fontSizeMobile};
+              line-height: ${theme.typography.h5.lineHeightMobile};
+            `
           : ""}
       `;
 
@@ -79,9 +84,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.h6.lineHeight};
 
         ${isTablet
-          ? css` 
-          font-size: ${theme.typography.h6.fontSizeMobile}
-          line-height: ${theme.typography.h6.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.h6.fontSizeMobile};
+              line-height: ${theme.typography.h6.lineHeightMobile};
+            `
           : ""}
       `;
 
@@ -92,9 +98,10 @@ export const applyTextType = (type: TextType, theme: Theme) => {
         line-height: ${theme.typography.body16.lineHeight};
 
         ${isTablet
-          ? css` 
-      font-size: ${theme.typography.body16.fontSizeMobile}
-      line-height: ${theme.typography.body16.lineHeightMobile}`
+          ? css`
+              font-size: ${theme.typography.body16.fontSizeMobile};
+              line-height: ${theme.typography.body16.lineHeightMobile};
+            `
           : ""}
       `;
   }

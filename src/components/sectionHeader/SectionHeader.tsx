@@ -15,7 +15,7 @@ const SectionHeader: React.FC<SectionHeaderTypes> = ({
   center,
   headerOne,
 }) => {
-  const { isTablet } = useQuery();
+  const { isMobile, isTablet } = useQuery();
 
   return (
     <ContentWrapper m={"auto"} mb={"s30"}>
@@ -23,13 +23,11 @@ const SectionHeader: React.FC<SectionHeaderTypes> = ({
         <Typography
           type={headerOne ? "h1" : "h2"}
           color="primary"
-          textAlign={center ? "center" : ""}
+          textAlign={center ? "center" : undefined}
         >
           {header}
         </Typography>
-        <Typography color={"gray"} textAlign={center ? "center" : ""}>
-          {paragraph}
-        </Typography>
+        <Typography color={"gray"}>{paragraph}</Typography>
       </FlexWrapper>
     </ContentWrapper>
   );

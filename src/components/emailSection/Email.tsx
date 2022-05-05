@@ -1,28 +1,25 @@
 import React from "react";
 import SectionHeader from "components/sectionHeader/SectionHeader";
 import BlackButton from "components/buttons/BlackButton";
-import { FlexWrapper, Input, Box, SectionWrapper, Image } from "components";
-import { StaticImage } from "gatsby-plugin-image";
+import { useQuery } from "styles/breakpoints";
 
-const Email = () => {
+import { FlexWrapper, Input, Box, SectionWrapper, Image } from "components";
+
+const Email: React.FC = () => {
+  const { isMobile } = useQuery();
+
   return (
-    <SectionWrapper position="relative">
-      <Box height={"100%"} pt={"s80"} mx={"s80"} textAlign={"center"}>
-        {/* <Box>
-          <StaticImage
-            src="../../assets/images/rectanglelong.png"
-            placeholder="tracedSVG"
-            draggable="false"
-            alt="teal"
-            style={{
-              width: "100%",
-            }}
-          />
-        </Box> */}
-        <Box>
-          <Image src="rectanglelong.png" />
+    <SectionWrapper>
+      <Box height={"100%"} pt={"s80"} textAlign={"center"}>
+        <Box position="relative">
+          <Image src="rectanglelong" />
         </Box>
-        <Box>
+        <Box
+          position="absolute"
+          top={isMobile ? "25%" : "35%"}
+          left={"15%"}
+          zIndex={2}
+        >
           <FlexWrapper>
             <SectionHeader
               header={"Deliciousness to your inbox"}

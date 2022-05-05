@@ -3,9 +3,10 @@ import { Image, Typography, FlexWrapper, Box } from "components";
 import { useQuery } from "styles/breakpoints";
 
 const MapVeggies = ["rice", "cake", "chocolate", "meat", "sandwich", "veggie"];
+const MapVeggiesMobile = ["rice", "cake", "chocolate"];
 
 const Vegetables = () => {
-  const { isTablet } = useQuery();
+  const { isMobile, isTablet } = useQuery();
 
   return (
     <Box
@@ -13,13 +14,22 @@ const Vegetables = () => {
       mt={isTablet ? "s40" : "s0"}
       mb={isTablet ? "s40" : "s160"}
     >
-      <Typography type="h3" color="primary" mb={"s80"}>
+      <Typography
+        type="h3"
+        color="primary"
+        mb={"s80"}
+        textAlign={isMobile ? "center" : undefined}
+      >
         Categories
       </Typography>
-      <FlexWrapper gap={"40px"} flexWrap="wrap">
-        {MapVeggies.map((veggies: any) => (
-          <Image src={veggies} />
-        ))}
+      <FlexWrapper
+        gap={"40px"}
+        flexWrap="wrap"
+        justifyContent={isMobile ? "center" : ""}
+      >
+        {isMobile
+          ? MapVeggiesMobile.map((veggies: any) => <Image src={veggies} />)
+          : MapVeggies.map((veggies: any) => <Image src={veggies} />)}
       </FlexWrapper>
     </Box>
   );
