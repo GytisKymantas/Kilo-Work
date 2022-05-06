@@ -59,6 +59,7 @@ const Footer: React.FC = () => {
             © 2020 Flowbase. Powered by{" "}
           </Typography>
           <Typography type={"span"} color="orange">
+            {" "}
             Webflow
           </Typography>
         </FlexWrapper>
