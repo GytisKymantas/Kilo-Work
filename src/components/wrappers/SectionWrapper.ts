@@ -12,7 +12,7 @@ export const SectionWrapper = styled.section<SectionWrapperStyles>`
   position: relative;
   padding: 3rem 0;
   min-height: ${({ minHeight }) => minHeight || ""};
-  min-width: ${({ maxWidth }) => maxWidth || ""};
+  max-width: ${({ maxWidth }) => maxWidth || ""};
   background-color: ${({ backgroundColor, theme }) =>
     backgroundColor ? theme.colors[backgroundColor] : ""};
 

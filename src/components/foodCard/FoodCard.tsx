@@ -34,7 +34,7 @@ const FoodCard: React.FC<FoodCardTypes> = ({
       {isMobile ? (
         <>
           {display === "show" ? (
-            <SectionWrapper maxWidth={"23.125rem"}>
+            <SectionWrapper maxWidth={"s320"}>
               <Box>
                 {image === "null" ? (
                   <Image src="advertisement" />
@@ -51,10 +51,10 @@ const FoodCard: React.FC<FoodCardTypes> = ({
                       height={"3rem"}
                       width={"3rem"}
                       bg="white"
-                      radius="50%"
+                      radius={"br50"}
                       position="absolute"
                       top="4.0625rem"
-                      right="1.25rem"
+                      right="6.25rem"
                       style={{ cursor: "pointer" }}
                     >
                       <HeartImage
@@ -88,7 +88,7 @@ const FoodCard: React.FC<FoodCardTypes> = ({
           ) : null}
         </>
       ) : (
-        <SectionWrapper maxWidth={"23.125rem"}>
+        <SectionWrapper maxWidth={"s320"}>
           <Box>
             {image === "null" ? (
               <Image src="advertisement" />
@@ -108,7 +108,7 @@ const FoodCard: React.FC<FoodCardTypes> = ({
                   radius="50%"
                   position="absolute"
                   top="4.0625rem"
-                  right="1.25rem"
+                  right="6.25rem"
                   style={{ cursor: "pointer" }}
                 >
                   <HeartImage

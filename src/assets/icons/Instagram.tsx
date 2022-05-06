@@ -2,7 +2,7 @@ import React from "react";
 
 export const Instagram: React.FC = () => {
   return (
-    <div>
+    <>
       <svg
         width="23"
         height="22"
@@ -24,6 +24,6 @@ export const Instagram: React.FC = () => {
         />
         <circle cx="17.8742" cy="5.08761" r="0.732875" fill="black" />
       </svg>
-    </div>
+    </>
   );
 };

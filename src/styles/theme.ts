@@ -63,6 +63,7 @@ export const theme = {
     s100: "6.25rem",
     s120: "7.5rem",
     s160: "10rem",
+    s370: "23.125rem",
   },
   typography: {
     h1: {
