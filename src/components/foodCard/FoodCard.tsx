@@ -34,10 +34,10 @@ const FoodCard: React.FC<FoodCardTypes> = ({
       {isMobile ? (
         <>
           {display === "show" ? (
-            <SectionWrapper maxWidth={"s320"}>
-              <Box>
+            <SectionWrapper>
+              <Box maxWidth={"400px"}>
                 {image === "null" ? (
-                  <Image src="advertisement" />
+                  <Image src="advertisement" style={{ width: "100%" }} />
                 ) : (
                   <Box
                     background={
@@ -45,16 +45,20 @@ const FoodCard: React.FC<FoodCardTypes> = ({
                     }
                   >
                     <MainImageContainer>
-                      <Image src={image} borderRadius="30px" />
+                      <Image
+                        src={image}
+                        borderRadius="30px"
+                        style={{ width: "100%" }}
+                      />
                     </MainImageContainer>
                     <Box
                       height={"3rem"}
                       width={"3rem"}
                       bg="white"
-                      radius={"br50"}
+                      radius={"50%"}
                       position="absolute"
-                      top="4.0625rem"
-                      right="6.25rem"
+                      top="9%"
+                      right="7%"
                       style={{ cursor: "pointer" }}
                     >
                       <HeartImage
@@ -88,10 +92,10 @@ const FoodCard: React.FC<FoodCardTypes> = ({
           ) : null}
         </>
       ) : (
-        <SectionWrapper maxWidth={"s320"}>
-          <Box>
+        <SectionWrapper maxWidth={"20rem"}>
+          <Box width={"25rem"} maxHeight={"26.875rem"}>
             {image === "null" ? (
-              <Image src="advertisement" />
+              <Image src="advertisement" style={{ width: "100%" }} />
             ) : (
               <Box
                 background={
@@ -99,16 +103,20 @@ const FoodCard: React.FC<FoodCardTypes> = ({
                 }
               >
                 <MainImageContainer>
-                  <Image src={image} borderRadius="30px" />
+                  <Image
+                    src={image}
+                    borderRadius="30px"
+                    style={{ width: "100%" }}
+                  />
                 </MainImageContainer>
                 <Box
                   height={48}
                   width={48}
                   bg="white"
-                  radius="50%"
+                  radius={"50%"}
                   position="absolute"
-                  top="4.0625rem"
-                  right="6.25rem"
+                  top="12%"
+                  right="-14%"
                   style={{ cursor: "pointer" }}
                 >
                   <HeartImage

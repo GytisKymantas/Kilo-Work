@@ -80,7 +80,6 @@ const FoodCardSection: React.FC = () => {
     <GridWrapper
       gridTemplateColumns={isMobile ? "1fr" : isTablet ? "1fr" : "1fr 1fr 1fr"}
       mx={isTablet ? "auto" : "s90"}
-      width={"23rem"}
       gridGap={isTablet ? "10px" : "56px"}
     >
       {MapFoodSection.map(
