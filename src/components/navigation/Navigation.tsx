@@ -48,11 +48,11 @@ const Navigation: React.FC = () => {
             </NavigationListItem>
           ))}
         </NavigationList>
-        <FlexWrapper gap={"40px"} mt={isTablet ? "s40" : "s0"}>
+        <SocialsWrapper mt={isTablet ? "s40" : "s0"}>
           <Facebook />
           <Twitter />
           <Instagram />
-        </FlexWrapper>
+        </SocialsWrapper>
       </FlexWrapper>
     </Box>
   );
@@ -64,6 +64,10 @@ export const NavigationList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
+`;
+
+export const SocialsWrapper = styled(FlexWrapper)`
+  gap: 40px;
 `;
 
 export const NavigationListItem = styled(Link)`

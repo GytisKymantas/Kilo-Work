@@ -3,6 +3,7 @@ import { Typography, FlexWrapper, Box, SectionWrapper } from "components";
 import { useQuery } from "styles/breakpoints";
 import { NavigationListItem } from "components/navigation/Navigation";
 import { NavigationList } from "components/navigation/Navigation";
+import { SocialsWrapper } from "components/navigation/Navigation";
 import { Facebook, Instagram, Twitter } from "assets/icons";
 
 const mapedNavigationLinks = ["Home", "Recipes", "Blog", "Contact", "About us"];
@@ -61,11 +62,11 @@ const Footer: React.FC = () => {
             Webflow
           </Typography>
         </FlexWrapper>
-        <FlexWrapper gap={"40px"}>
+        <SocialsWrapper mt={isTablet ? "s40" : "s0"}>
           <Facebook />
           <Twitter />
           <Instagram />
-        </FlexWrapper>
+        </SocialsWrapper>
       </FlexWrapper>
     </SectionWrapper>
   );

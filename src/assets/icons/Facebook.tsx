@@ -2,7 +2,7 @@ import React from "react";
 
 export const Facebook: React.FC = () => {
   return (
-    <div>
+    <>
       <svg
         width="10"
         height="20"
@@ -15,6 +15,6 @@ export const Facebook: React.FC = () => {
           fill="black"
         />
       </svg>
-    </div>
+    </>
   );
 };

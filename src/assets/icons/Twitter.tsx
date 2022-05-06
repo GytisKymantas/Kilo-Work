@@ -2,7 +2,7 @@ import React from "react";
 
 export const Twitter: React.FC = () => {
   return (
-    <div>
+    <>
       <svg
         width="23"
         height="18"
@@ -15,6 +15,6 @@ export const Twitter: React.FC = () => {
           fill="black"
         />
       </svg>
-    </div>
+    </>
   );
 };
