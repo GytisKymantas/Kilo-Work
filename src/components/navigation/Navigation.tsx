@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { useQuery } from "styles/breakpoints";
-import { Typography, Box, FlexWrapper, Image } from "components";
+import { Typography, Box, FlexWrapper } from "components";
 import { Link } from "gatsby";
+import { Facebook, Instagram, Twitter } from "assets/icons";
+import { theme } from "styles/theme";
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const { isMobile, isTablet } = useQuery();
   const mapedNavigationLinks = [
     "Home",
@@ -15,7 +17,7 @@ const Navigation = () => {
   ];
   return (
     <Box
-      height={isTablet ? 300 : 110}
+      height={isTablet ? "18.75rem" : "6.875rem"}
       maxWidth={1440}
       borderBottom="1px solid rgba(0, 0, 0, 0.1)"
       mb={"s40"}
@@ -24,11 +26,10 @@ const Navigation = () => {
       <FlexWrapper
         justifyContent={isMobile ? "center" : "space-around"}
         flexDirection={isTablet ? "column" : "row"}
-        // justifyContent={isMobile ? "center" : ""}
         alignItems={"center"}
         gap={isTablet ? "20px" : ""}
+        height={"100%"}
       >
-        {/* <Box> */}
         <Typography
           type={"h2"}
           color={"primary"}
@@ -48,9 +49,9 @@ const Navigation = () => {
           ))}
         </NavigationList>
         <FlexWrapper gap={"40px"} mt={isTablet ? "s40" : "s0"}>
-          <Image src="facebook" />
-          <Image src="twitter" />
-          <Image src="instagram" />
+          <Facebook />
+          <Twitter />
+          <Instagram />
         </FlexWrapper>
       </FlexWrapper>
     </Box>
@@ -67,6 +68,7 @@ export const NavigationList = styled.ul`
 
 export const NavigationListItem = styled(Link)`
   cursor: pointer;
+  color: ${theme.colors.primary};
   list-style-type: none;
   text-decoration: none;
 `;

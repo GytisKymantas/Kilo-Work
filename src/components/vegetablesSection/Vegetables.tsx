@@ -5,7 +5,7 @@ import { useQuery } from "styles/breakpoints";
 const MapVeggies = ["rice", "cake", "chocolate", "meat", "sandwich", "veggie"];
 const MapVeggiesMobile = ["rice", "cake", "chocolate"];
 
-const Vegetables = () => {
+const Vegetables: React.FC = () => {
   const { isMobile, isTablet } = useQuery();
 
   return (

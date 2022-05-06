@@ -1,6 +1,5 @@
 import React from "react";
 import { FlexWrapper, ContentWrapper, Typography } from "components";
-import { useQuery } from "styles/breakpoints";
 
 type SectionHeaderTypes = {
   header?: string;
@@ -15,8 +14,6 @@ const SectionHeader: React.FC<SectionHeaderTypes> = ({
   center,
   headerOne,
 }) => {
-  const { isMobile, isTablet } = useQuery();
-
   return (
     <ContentWrapper m={"auto"} mb={"s30"}>
       <FlexWrapper gap={"14px"} flexDirection="column">

@@ -1,14 +1,11 @@
 import React from "react";
-import {
-  Image,
-  Typography,
-  FlexWrapper,
-  Box,
-  SectionWrapper,
-} from "components";
+import { Typography, FlexWrapper, Box, SectionWrapper } from "components";
 import { useQuery } from "styles/breakpoints";
 import { NavigationListItem } from "components/navigation/Navigation";
 import { NavigationList } from "components/navigation/Navigation";
+import { Facebook, Instagram, Twitter } from "assets/icons";
+
+const mapedNavigationLinks = ["Home", "Recipes", "Blog", "Contact", "About us"];
 
 const Footer: React.FC = () => {
   const { isMobile, isTablet } = useQuery();
@@ -35,16 +32,16 @@ const Footer: React.FC = () => {
             </Typography>
           </Box>
           <NavigationList>
-            <NavigationListItem to={"/home"}>Home</NavigationListItem>
-            <NavigationListItem to={"/"}>Recipes</NavigationListItem>
-            <NavigationListItem to={"/"}>Blog</NavigationListItem>
-            <NavigationListItem to={"/"}>Contact</NavigationListItem>
-            <NavigationListItem to={"/"}>About us</NavigationListItem>
+            {mapedNavigationLinks.map((link) => (
+              <NavigationListItem to={`/${link}`}>{link}</NavigationListItem>
+            ))}
           </NavigationList>
         </FlexWrapper>
-        <Typography type={"span"} color="gray">
-          Lorem ipsum dolor sit amet, consectetuipisicing elit,{" "}
-        </Typography>
+        <Box mt={isMobile ? "s80" : undefined}>
+          <Typography type={"span"} color="gray">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit,{" "}
+          </Typography>
+        </Box>
       </Box>
       <FlexWrapper
         mt={isTablet ? "s20" : "s50"}
@@ -55,7 +52,7 @@ const Footer: React.FC = () => {
         alignItems={isTablet ? "center" : ""}
         gap={isTablet ? "20px" : ""}
       >
-        <Box width="100px" height="30px"></Box>
+        <Box width="6.25rem" height="1.875rem"></Box>
         <FlexWrapper gap="5px">
           <Typography type={"span"} color="primary">
             © 2020 Flowbase. Powered by{" "}
@@ -65,9 +62,9 @@ const Footer: React.FC = () => {
           </Typography>
         </FlexWrapper>
         <FlexWrapper gap={"40px"}>
-          <Image src="facebook" />
-          <Image src="twitter" />
-          <Image src="instagram" />
+          <Facebook />
+          <Twitter />
+          <Instagram />
         </FlexWrapper>
       </FlexWrapper>
     </SectionWrapper>

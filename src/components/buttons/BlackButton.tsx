@@ -19,15 +19,15 @@ const BlackButton: React.FC<BlackButtonTypes> = ({
     <BaseButton
       type="button"
       color="white"
-      width={200}
-      height={60}
+      width={"12.5rem"}
+      height={"3.75rem"}
       display="flex"
       border="none"
       alignItems="center"
       backgroundColor="primary"
       justifyContent="center"
       pl={"s20"}
-      rad={isShort ? "15px" : "30px"}
+      rad={isShort ? "0.9375rem" : "1.875rem"}
       gap={"16px"}
       onClick={onClick}
     >

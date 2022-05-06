@@ -8,13 +8,13 @@ import UserAccount from "components/userAccount/UserAccount";
 import styled from "styled-components/macro";
 import { useQuery } from "styles/breakpoints";
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   const { isTablet } = useQuery();
 
   return (
     <GridWrapper
       gridTemplateColumns={isTablet ? "1fr" : "1fr 1fr"}
-      gridTemplateRows={"640px"}
+      gridTemplateRows={"40rem"}
       mx={isTablet ? "s0" : "s90"}
       mb={isTablet ? "s0" : "s160"}
     >

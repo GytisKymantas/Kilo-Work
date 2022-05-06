@@ -7,7 +7,6 @@ import SectionHeader from "components/sectionHeader/SectionHeader";
 import Email from "components/emailSection/Email";
 import Footer from "components/footer/Footer";
 import React from "react";
-import Home from "./home";
 
 const Landing = () => {
   return (
@@ -24,8 +23,6 @@ const Landing = () => {
       <KitchenChef />
       <Email />
       <Footer />
-      {/* <Home />
-      <FoodCardSection /> */}
     </>
   );
 };

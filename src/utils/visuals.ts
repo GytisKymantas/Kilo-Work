@@ -3,6 +3,7 @@ import facebook from "assets/images/facebook.svg";
 import twitter from "assets/images/twitter.svg";
 import burger from "assets/images/burger.png";
 import heartred from "assets/images/heartred.svg";
+import heartgray from "assets/images/heartgray.svg";
 import forkknife from "assets/images/forkknife.svg";
 import timewatch from "assets/images/timewatch.svg";
 import user from "assets/images/user.png";
@@ -41,6 +42,7 @@ export const visuals: Record<string, string> = {
   play,
   scroll,
   rice,
+  heartgray,
   cake,
   chocolate,
   meat,

@@ -2,24 +2,18 @@ import React from "react";
 import SectionHeader from "components/sectionHeader/SectionHeader";
 import BlackButton from "components/buttons/BlackButton";
 import { useQuery } from "styles/breakpoints";
+import { RectangleLong } from "../../assets/images/rectanglelong.png";
+import styled from "styled-components/macro";
 
-import { FlexWrapper, Input, Box, SectionWrapper, Image } from "components";
+import { FlexWrapper, Input, Box, SectionWrapper } from "components";
 
 const Email: React.FC = () => {
   const { isMobile } = useQuery();
 
   return (
     <SectionWrapper>
-      <Box height={"100%"} pt={"s80"} textAlign={"center"}>
-        <Box position="relative">
-          <Image src="rectanglelong" />
-        </Box>
-        <Box
-          position="absolute"
-          top={isMobile ? "25%" : "35%"}
-          left={"15%"}
-          zIndex={2}
-        >
+      <BackgroundBox py={"s80"} textAlign={"center"} bg={"teal"}>
+        <Box>
           <FlexWrapper>
             <SectionHeader
               header={"Deliciousness to your inbox"}
@@ -30,24 +24,35 @@ const Email: React.FC = () => {
             />
           </FlexWrapper>
           <FlexWrapper justifyContent="center">
-            <Box position="relative">
+            <Box
+              position={isMobile ? undefined : "relative"}
+              width={isMobile ? "50%" : undefined}
+            >
               <Box>
                 <Input
-                  p={"30px"}
-                  width={"480px"}
-                  height={"80px"}
+                  p={"1.875rem"}
+                  width={isMobile ? "12rem" : "30rem"}
+                  height={"5rem"}
                   placeholder={"Your email adress..."}
                 ></Input>
               </Box>
-              <Box position={"absolute"} top={"10%"} right={"5%"}>
+              <Box
+                position={isMobile ? undefined : "absolute"}
+                top={"10%"}
+                right={"5%"}
+              >
                 <BlackButton title={"Subscribe"} isShort />
               </Box>
             </Box>
           </FlexWrapper>
         </Box>
-      </Box>
+      </BackgroundBox>
     </SectionWrapper>
   );
 };
 
+const BackgroundBox = styled(Box)`
+  // does not work for some reason? had to use normal teal color as background
+  background-image: url("../../assets/images/rectanglelong.png");
+`;
 export default Email;

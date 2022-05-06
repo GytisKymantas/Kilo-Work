@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Image, Typography, FlexWrapper } from "components";
 
 type GrayButtonType = {
-  title: string;
+  title?: string;
   image?: string;
   secondButton?: boolean;
   isGray?: boolean;

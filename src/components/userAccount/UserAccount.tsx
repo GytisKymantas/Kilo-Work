@@ -3,7 +3,6 @@ import { Image } from "components/Image";
 import { FlexWrapper } from "components/wrappers/FlexWrapper";
 import { Box } from "components/wrappers/Box";
 import { Typography } from "components/typography/Typography";
-import styled from "styled-components/macro";
 
 type UserAccountType = {
   name?: string;

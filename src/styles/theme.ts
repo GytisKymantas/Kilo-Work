@@ -67,14 +67,14 @@ export const theme = {
   typography: {
     h1: {
       fontSize: "4rem",
-      fontSizeMobile: "2rem",
+      fontSizeMobile: "2.5rem",
       lineHeight: "4.8125rem",
       lineHeightMobile: "5.25rem",
       fontWeight: 600,
     },
     h2: {
       fontSize: "3rem",
-      fontSizeMobile: "3rem",
+      fontSizeMobile: "2.5rem",
       lineHeight: "4.8125rem",
       lineHeightMobile: "5.25rem",
       fontWeight: 600,

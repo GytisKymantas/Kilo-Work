@@ -6,21 +6,20 @@ import SectionHeader from "components/sectionHeader/SectionHeader";
 import BlackButton from "components/buttons/BlackButton";
 import { FlexWrapper } from "components/wrappers/FlexWrapper";
 
-const KitchenChef = () => {
+export const KitchenChef: React.FC = () => {
   const { isMobile, isTablet } = useQuery();
   return (
     <SectionWrapper>
       <GridWrapper gridTemplateColumns={isTablet ? "1fr" : "1fr 1fr"}>
         <Box>
           <SectionHeader
-            center
             header={"Everyone can be a chef in their own kitchen"}
             paragraph={
               "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
             }
           />
           <FlexWrapper
-            ml={"s70"}
+            ml={isMobile ? "s0" : "s70"}
             justifyContent={isMobile ? "center" : undefined}
           >
             <BlackButton title={"Learn More"} />

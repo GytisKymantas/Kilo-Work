@@ -36,11 +36,9 @@ export const Image: React.FC<ImageProps> = ({
   ...rest
 }) => {
   return (
-    // kol neuzkraus vartotojui, uzims sitiek, nebus prapleciamos nesamones ir rezervuoja iskarto
     <LazyLoad height={200}>
       <picture>
         {mobile_src && <source media={mobile} srcSet={visuals[mobile_src]} />}
-        {/* uzsetina sitaip kaip mobile, bet pirma mobile turi buti <source> yra html tagas, turi attributa srcSet*/}
         <Img src={visuals[src as string]} alt={src} {...rest} />
       </picture>
     </LazyLoad>
