@@ -9,7 +9,7 @@ import styled from "styled-components/macro";
 import { useQuery } from "styles/breakpoints";
 
 const HeroSection: React.FC = () => {
-  const { isTablet } = useQuery();
+  const { isMobile, isTablet } = useQuery();
 
   return (
     <GridWrapper
@@ -51,11 +51,16 @@ const HeroSection: React.FC = () => {
               }
             />
           </Box>
-          <FlexWrapper ml={"s50"} mb={isTablet ? "s50" : "s100"} gap={"16px"}>
+          <FlexWrapper ml={"s50"} mb={isMobile ? "s20" : "s100"} gap={"16px"}>
             <GrayButton image={"timewatch"} title={"30 Minutes"} />
             <GrayButton image={"forkknife"} title={"Chicken"} />
           </FlexWrapper>
-          <FlexWrapper ml={"s50"} mb={"s50"} gap={"50px"}>
+          <FlexWrapper
+            ml={"s50"}
+            mb={"s50"}
+            gap={"50px"}
+            flexWrap={isMobile ? "wrap" : undefined}
+          >
             <UserAccount
               name={"John Smith"}
               dateOfPost={"15 March 2022"}
