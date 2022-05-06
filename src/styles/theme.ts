@@ -31,6 +31,8 @@ export const theme = {
       fontSize: "5rem",
       fontSizeMobile: "4rem",
       lineHeight: "5.5rem",
+      lineHeightMobile: "56px",
+
       fontWeight: 700,
     },
     h2: {
